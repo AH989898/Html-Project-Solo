@@ -1,0 +1,257 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+/* Set base font size to 10px for easier scaling */
+html {
+  font-size: 10px;
+}
+
+/* Define Merriweather Black Italic font-face */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Merriweather-BlackItalic.woff2') format('woff2'),
+       url('Merriweather-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Define Merriweather Italic font-face */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Merriweather-Italic.woff2') format('woff2'),
+       url('Merriweather-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Define Merriweather Bold font-face */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Merriweather-Bold.woff2') format('woff2'),
+       url('Merriweather-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Define Merriweather Black font-face */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Merriweather-Black.woff2') format('woff2'),
+       url('Merriweather-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Define Merriweather Light font-face */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Merriweather-Light.woff2') format('woff2'),
+       url('Merriweather-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Define Merriweather Light Italic font-face */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Merriweather-LightItalic.woff2') format('woff2'),
+       url('Merriweather-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Define Merriweather Bold Italic font-face */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Merriweather-BoldItalic.woff2') format('woff2'),
+       url('Merriweather-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Define Merriweather Regular font-face */
+@font-face {
+  font-family: 'Merriweather';
+  src: url('Merriweather-Regular.woff2') format('woff2'),
+       url('Merriweather-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Define Roboto Slab Regular font-face */
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url('RobotoSlab-Regular.woff2') format('woff2'),
+       url('RobotoSlab-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Apply Roboto Slab font to all h1, h2, h3 headings */
+h1, h2, h3 {
+  font-family: 'Roboto Slab';
+}
+
+/* Apply Merriweather font to body text with adjusted spacing */
+body {
+  font-family: 'Merriweather';
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+/* Indent paragraphs following h2 in sections */
+section h2 + p {
+  text-indent: 20px;
+}
+
+/* Set font size of h2 elements */
+h2 {
+  font-size: 2rem;
+}
+
+/* Style h1 elements with specific properties */
+h1 {
+  text-align: center;
+  font-family: 'Merriweather';
+  line-height: 1.6;
+  font-size: 3rem;
+}
+
+/* Style focused links */
+a:focus {
+  color: rgb(138, 83, 83);
+}
+
+/* Style visited links */
+a:visited {
+  color: #a66;
+}
+
+/* Style hovered links */
+a:hover {
+  color: rgb(138, 44, 44);
+}
+
+/* Style active (clicked) links */
+a:active {
+  color: rgb(87, 52, 52);
+}
+
+/* Set default link color */
+a {
+  color: rgb(155, 93, 93);
+}
+
+/* Remove default list style from navigation menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style navigation list items */
+nav li {
+  background-color: #ffffff;
+  border: 2px solid #a66;
+  padding: 20px;
+  margin: 10px;
+  color: #a66;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Style links inside navigation list items */
+nav li a {
+  text-decoration: none;
+  color: #a66;
+}
+
+/* Add external link icon after external links */
+a[href^="http"]:not([href*="yourdomain.com"])::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 5px;
+  background: url('external-link-52.png') no-repeat center center;
+  background-size: contain;
+}
+
+/* Set line height for paragraphs */
+p {
+  line-height: 15px;
+}
+
+/* Set line height for list items */
+li {
+  line-height: 15px;
+}
+
+/* Remove default list bullets from unordered lists */
+ul {
+  list-style: none;
+}
+
+/* Add custom bullet symbol to list items */
+ul li::before {
+  content: "▪";
+  color: rgb(0, 0, 0);
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+/* Remove custom bullet symbols from navigation list items */
+nav ul li::before {
+  content: none;
+}

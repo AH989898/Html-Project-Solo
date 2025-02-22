@@ -1,0 +1,107 @@
+/* General styling */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 200%;
+  padding: 50px 20px;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+/* Grid Layout for main content */
+.grid {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 980px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Navigation Styling */
+nav {
+  background-color: #000;
+  padding: .5em;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Keeps nav on top while scrolling */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: .5em 1em;
+}
+
+/* Article Styling */
+article {
+  flex: 1 1 60%; /* Makes article column flexible */
+}
+
+article img.feature {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+/* Aside Styling */
+aside {
+  flex: 1 1 30%; /* Makes aside column flexible */
+}
+
+/* Grid Layout for Photos */
+.photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 1px; /* 1px gap between images */
+}
+
+.photos li {
+  margin: 0;
+}
+
+.photos img {
+  width: 100%; /* Ensures images fill the column width */
+}
+
+/* Ensuring responsive layout */
+@media (max-width: 768px) {
+  .grid {
+      flex-direction: column;
+  }
+
+  article {
+      flex: 1 1 100%;
+  }
+
+  aside {
+      flex: 1 1 100%;
+  }
+
+  .photos {
+      grid-template-columns: 1fr; /* Stacks images in a single column on smaller screens */
+  }
+}
